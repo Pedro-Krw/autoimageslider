@@ -74,12 +74,15 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            release(MavenPublication) {
-                from components.release
+            maven(MavenPublication) {
+                groupId = 'org.pace-pdro'
+                artifactId = 'image-slider'
+                version = "1.0"
 
-                groupId = 'com.github.pace-pdro'
-                artifactId = 'image-slider-jetpack-compose'
-                version = '1.0'
+                pom {
+                    description = 'The Image Slider Jetpack Compose is a component used to display a series of images in a swipeable slider format in Android app development using Jetpack Compose'
+
+                }
             }
         }
     }
